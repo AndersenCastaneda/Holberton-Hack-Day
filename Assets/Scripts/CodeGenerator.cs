@@ -5,6 +5,7 @@ public static class CodeGenerator
 	private static int[] arrayCode = new int[4];
 	private static int length = 4;
 
+	private static int[] feedback = new int[4];
 	//MasterCode Generator
 	public static int[] MasterCode()
 	{
@@ -21,7 +22,10 @@ public static class CodeGenerator
 		{
 			for (int j = 0; j < length; j++)
 			{
-				// if (arrayCode[i] == userCode[j])
+				if (arrayCode[i] == userCode[j])
+				{
+					
+				}
 			}
 			if (arrayCode[i] != userCode[i])
 				return false;
