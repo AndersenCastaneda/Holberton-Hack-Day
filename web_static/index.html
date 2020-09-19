@@ -1,83 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HackDay: Mastermind</title>
 </head>
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
-	*{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-	li{ 
-		list-style: none;
-	}
+	@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
 	.container {
 		margin: 30px;
-		padding: 30px;
-		text-align: center;
+		padding: 50px 100px;
 		background-color: #dee2e6;
-		box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.75);
-		font-family: 'Roboto', sans-serif;
+		box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+		font-family: "Roboto", sans-serif;
+		text-align: center;
+	}
+
+	.title {
+		font-size: 40px;
+		font-weight: 400;
+		letter-spacing: 3px;
+		margin: 0 auto;
+	}
+
+	.section {
+		margin: 30px;
+	}
+
+	.subtitle {
+		letter-spacing: 3px;
+		margin: 10px;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.team {
+		width: 50%;
+		margin: 10px;
+		box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+
+	.lenguage__description {
+		width: 50%;
+		padding: 0px 30px;
+		margin: 10px;
+		box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+
+	.image {
+		box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.8);
+		width: 600px;
+	}
+
+	.parrafo {
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	.information {
+		padding: 80px 80px 30px 80px;
+	}
+
+	.instructions {
+		font-size: 20px;
 	}
 </style>
+
 <body>
 	<div class="container">
-
-		<h1><span style="font-weight: 600;">How to make the game: &ldquo;Mastermind&rdquo; in different lenguages</h1></p>
-		
-		<h2><span >Campus presentation</span></h2>
-		<p><span >We are </span><span >cohort 11 of Holberton School campus
-				Medell&iacute;n.</span></p>
-		
-		<h2><span >Using Unity</span></h2>
-		<h3><span >Team members</span></h3>
-		<ul>
-			<li ><span >Andersen Casta&ntilde;eda</span></li>
-			<li ><span >Diana Carolina Quintero</span></li>
-			<li ><span >Juan Felipe Rodriguez</span></li>
-		</ul>
-		
-		<h3><span >Presentation of the language</span></h3>
-		<p><span >In Unity we use c# wish is </span><span >a general-purpose,
-				multi-paradigm programming language encompassing strong typing, lexically scoped, imperative, declarative,
-				functional, generic, object-oriented, and component-oriented programming disciplines.</span></p>
-		<h3><span >Algorithm put in place</span></h3>
-		<img src="images/core-algorithm.png" alt="core algorithm">
-		<p><span >(screenshot)</span></p>
-		<p><span >Before run our core algorithm, we generate a random &lsquo;Master code&rsquo; of 4
-				slots, every slot can be some of the 6 available colors.</span></p>
-		<p><span >Then we wait for the user to submit his selections and we run the core
-				algorithm:</span></p>
-		<p><span >We have a loop to compare every &lsquo;Master code&rsquo; slot with the &lsquo;User
-				code&rsquo; slot in the same position, if they have the same color we set the corresponding feedback (one red
-				ping) and we update the array &lsquo;userIsEvaluated&rsquo; wich indicates wich slots sould&rsquo;t be take in
-				account in later iterations.</span></p>
-		<p><span >If they haven&rsquo;t the same color we start another loop to looking for some other
-				slot with the same color and we set the corresponding feedback (one white ping).</span></p>
-		
-		<h3><span >User(s) flow to play</span></h3>
-		<ul>
-			<li ><span >Download the game</span></li>
-			<li ><span >open the foder:</span></li>
-			<li ><span >execute the Holberton-Hack-Day.exe</span></li>
-			<li ><span >click on the slots of the first level:</span></li>
-		</ul>
-		<p><span >(screenshot)</span></p>
-		<ul>
-			<li ><span >Submit your selections, and if you fail you can select
-					the slots of the next level.</span></li>
-		</ul>
-		<p><span >(screenshot)</span></p>
-		<ul>
-			<li ><span >If you win or lose all levels you will see the
-					&lsquo;Master code&rsquo;</span></li>
-		</ul>
-		<p><span >(screenshot)</span></p>
+		<section class="section presentation">
+			<h1 class="title">
+				How to make the game: "Mastermind" in different lenguages
+			</h1>
+			<h2 class="subtitle">Campus Presentation</h2>
+			<h2>Using Unity</h2>
+			<div class="info">
+				<div class="team">
+					<h3>Team members</h3>
+					<ul>
+						<li>Andersen Castañeda</li>
+						<li>Diana Carolina Quintero</li>
+						<li>Juan Felipe Rodriguez</li>
+						<li>Manuel Puerta</li>
+						<li>Andres Jejen</li>
+					</ul>
+				</div>
+				<div class="lenguage__description">
+					<h3>Presentation of the lenguage</h3>
+					<p>
+						In Unity we use c# wish is general-purpose, multi-paradigm
+						programming language encompassing strong typing, lexically scoped,
+						imperative, declarative, functional, generic, object-oriented, and
+						component-oriented programming disciplines.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="section information">
+			<h3>Algorithm put in place</h3>
+			<img class="image" src="images/core-algorithm.png" alt="core algorithm">
+			<img class="image" src="images/screenshot-01.jpg" alt="core algorithm">
+			<p class="parrafo">
+				Before run our core algorithm, we generate a random &lsquo;Master code&rsquo; of 4
+				slots, every slot can be some of the 6 available colors.
+				Then we wait for the user to submit his selections and we run the core
+				algorithm:
+				We have a loop to compare every &lsquo;Master code&rsquo; slot with the &lsquo;User
+				code&rsquo; slot in the same position, if they have the same color we set the corresponding feedback
+				(one red
+				ping) and we update the array &lsquo;userIsEvaluated&rsquo; wich indicates wich slots sould&rsquo;t be
+				take in
+				account in later iterations.
+				If they haven&rsquo;t the same color we start another loop to looking for some other
+				slot with the same color and we set the corresponding feedback (one white ping).
+			</p>
+		</section>
+		<section class="section instructions">
+			<h3>
+				User(s) flow to play
+			</h3>
+			<ul>
+				<li>Download the game</li>
+				<li>open the foder:</li>
+				<li>execute the Holberton-Hack-Day.exe</li>
+				<li>click on the slots of the first level:</li>
+			</ul>
+			<img class="image" src="images/screenshot-02.jpg" alt="core algorithm">
+			<hr>
+			<ul>
+				<li>Submit your selections, and if you fail you can select
+					the slots of the next level.</li>
+			</ul>
+			<img class="image" src="images/screenshot-03.jpg" alt="core algorithm">
+			<ul>
+				<li>If you win or lose all levels you will see the
+					&lsquo;Master code&rsquo;</li>
+		</section>
 	</div>
-
 </body>
+
 </html>
