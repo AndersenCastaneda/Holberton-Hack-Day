@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private GameObject youLose;
 	[SerializeField] private GameObject youWin;
 	[SerializeField] private GameObject cover;
+	[SerializeField] private GameObject restartButton;
+	[SerializeField] private GameObject checkCombination;
 #pragma warning restore 0649
 
 	private void Awake()
@@ -40,6 +43,8 @@ public class GameManager : MonoBehaviour
 		{
 			youWin.SetActive(true);
 			cover.SetActive(false);
+			restartButton.SetActive(true);
+			checkCombination.SetActive(false);
 		}
 		else
 		{
@@ -63,6 +68,8 @@ public class GameManager : MonoBehaviour
 		{
 			youLose.SetActive(true);
 			cover.SetActive(false);
+			restartButton.SetActive(true);
+			checkCombination.SetActive(false);
 			userPlayer.level++;
 		}
 
@@ -86,5 +93,10 @@ public class GameManager : MonoBehaviour
 	public void UserMasterCode(int value, int index)
 	{
 		userCode[index] = value;
+	}
+
+	public void RestartGame()
+	{
+		SceneManager.LoadScene("Game");
 	}
 }
