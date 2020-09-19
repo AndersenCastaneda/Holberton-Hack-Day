@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private ColorManager colorManager;
 	[SerializeField] private GameObject youLose;
 	[SerializeField] private GameObject youWin;
+	[SerializeField] private GameObject cover;
 #pragma warning restore 0649
 
 	private void Awake()
@@ -36,7 +37,10 @@ public class GameManager : MonoBehaviour
 		colorManager.SetFeedBackColor(feedBackManager, feedback, userPlayer.level, userCode);
 
 		if (CheckVictory())
+		{
 			youWin.SetActive(true);
+			cover.SetActive(true);
+		}
 		else
 		{
 			if (!EntryManager.IsValidUserCode(userCode))
@@ -58,6 +62,7 @@ public class GameManager : MonoBehaviour
 		if (userPlayer.level == 9 && !CheckVictory())
 		{
 			youLose.SetActive(true);
+			cover.SetActive(true);
 			userPlayer.level++;
 		}
 
