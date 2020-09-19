@@ -16,7 +16,9 @@ public class UserPlayer : MonoBehaviour
 	public void Entrylevel()
 	{
 		int length = levels.Length;
-		levels[level].SetActive(true);
+
+		if (level < 10)
+			levels[level].SetActive(true);
 		for (int i = 0; i < 4; i++)
 		{
 			if (level > 0)
@@ -24,10 +26,4 @@ public class UserPlayer : MonoBehaviour
 		}
 	}
 
-}
-
-[System.Serializable]
-public class SubLevel
-{
-	public BoxCollider2D[] previousLevels = new BoxCollider2D[4];
 }

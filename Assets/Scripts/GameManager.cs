@@ -8,38 +8,63 @@ public class GameManager : MonoBehaviour
 	public int[] userCode = new int[4];
 	public int[] feedback = new int[4];
 
-
-	[SerializeField] private Sprite[] spriteColors = new Sprite[6];
 	public static Sprite[] playerColors = new Sprite[6];
+
+
+	public FeedBackManager feedBackManager;
+
 
 #pragma warning disable 0649
 	[SerializeField] private UserPlayer userPlayer;
+	[SerializeField] private ColorManager colorManager;
+	[SerializeField] private GameObject youLose;
+	[SerializeField] private GameObject youWin;
 #pragma warning restore 0649
 
 	private void Awake()
 	{
-		playerColors = spriteColors;
 		masterCode = CodeGenerator.GenerateMasterCode();
 		MasterCodePositions.CreateSprites();
-		// feedback = CheckMasterCode.IsCodeCorrect(masterCode, userCode);
-		for (int i = 0; i < 4; i++)
-			MasterCodePositions.masterObjects[i].sprite = spriteColors[masterCode[i]];
+		playerColors = colorManager.spriteColors;
+		colorManager.SetMasterCodeColor(masterCode);
 	}
 
 	public void TestCases()
 	{
 		feedback = CheckMasterCode.IsCodeCorrect(masterCode, userCode);
+
+		colorManager.SetFeedBackColor(feedBackManager, feedback, userPlayer.level, userCode);
+
 		if (CheckVictory())
-		{
-			//Si ganó
-			Debug.Log("Ganaste");
-		}
+			youWin.SetActive(true);
 		else
 		{
-			userPlayer.level++;
-			userPlayer.Entrylevel();
-			Debug.Log("Sigue intentando");
+			if (!EntryManager.IsValidUserCode(userCode))
+				return;
+
+			NewLevel();
+			CleanUserCode();
 		}
+	}
+
+	private void CleanUserCode()
+	{
+		for (int i = 0; i < 4; i++)
+			userCode[i] = -1;
+	}
+
+	private void NewLevel()
+	{
+		if (userPlayer.level == 9 && !CheckVictory())
+		{
+			youLose.SetActive(true);
+			userPlayer.level++;
+		}
+
+		if (userPlayer.level < 9)
+			userPlayer.level++;
+
+		userPlayer.Entrylevel();
 	}
 
 	private bool CheckVictory()
