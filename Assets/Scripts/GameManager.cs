@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 		if (CheckVictory())
 		{
 			youWin.SetActive(true);
-			cover.SetActive(true);
+			cover.SetActive(false);
 		}
 		else
 		{
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 		if (userPlayer.level == 9 && !CheckVictory())
 		{
 			youLose.SetActive(true);
-			cover.SetActive(true);
+			cover.SetActive(false);
 			userPlayer.level++;
 		}
 
