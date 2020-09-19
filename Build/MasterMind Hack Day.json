@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Holberton Hack Day",
+"productVersion": "0.1",
+"dataUrl": "MasterMind Hack Day.data.unityweb",
+"wasmCodeUrl": "MasterMind Hack Day.wasm.code.unityweb",
+"wasmFrameworkUrl": "MasterMind Hack Day.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.5f1"
+}
