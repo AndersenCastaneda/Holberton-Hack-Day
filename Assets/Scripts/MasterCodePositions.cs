@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public static class MasterCodePositions
 {
@@ -8,13 +9,16 @@ public static class MasterCodePositions
 		new Vector2(-6.03f, -0.46f), new Vector2(-6.03f, 0.16f),
 		new Vector2(-6.03f, 0.82f), new Vector2(-6.03f, 1.45f)};
 
+	public static SpriteRenderer[] masterObjects = new SpriteRenderer[4];
+
 	public static void CreateSprites()
 	{
 		for (int i = 0; i < 4; i++)
 		{
 			GameObject gameObject = new GameObject(i.ToString());
-			var s = gameObject.AddComponent<SpriteRenderer>();
 			gameObject.transform.position = positions[i];
+			SpriteRenderer sr = gameObject.AddComponent<SpriteRenderer>();
+			masterObjects[i] = sr;
 		}
 	}
 }

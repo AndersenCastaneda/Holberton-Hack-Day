@@ -9,7 +9,7 @@ public static class CodeGenerator
 	public static int[] GenerateMasterCode()
 	{
 		for (int i = 0; i < length; i++)
-			masterCode[i] = Random.Range(1, 7);
+			masterCode[i] = Random.Range(0, 6);
 
 		return masterCode;
 	}

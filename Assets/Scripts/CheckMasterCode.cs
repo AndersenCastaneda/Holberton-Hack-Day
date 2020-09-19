@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class CheckMasterCode
+﻿public static class CheckMasterCode
 {
 	private static int[] feedback = new int[4];
 	private static bool[] userIsEvaluated = new bool[4];
