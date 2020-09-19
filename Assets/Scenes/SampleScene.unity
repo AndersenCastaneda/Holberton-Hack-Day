@@ -3094,6 +3094,7 @@ MonoBehaviour:
   colorManager: {fileID: 1176727670}
   youLose: {fileID: 2077191637}
   youWin: {fileID: 2104279352}
+  cover: {fileID: 1749268689}
 --- !u!4 &663904668
 Transform:
   m_ObjectHideFlags: 0
