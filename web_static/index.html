@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1><span style="font-weight: 600;">How to make the game: &ldquo;Mastermind&rdquo; in different lenguages</h1></p>
+	<p>&nbsp;</p>
+	<h2><span style="font-weight: 400;">Campus presentation</span></h2>
+	<p><span style="font-weight: 400;">We are </span><span style="font-weight: 400;">cohort 11 of Holberton School campus
+			Medell&iacute;n.</span></p>
+	<p>&nbsp;</p>
+	<h2><span style="font-weight: 400;">Using Unity</span></h2>
+	<h3><span style="font-weight: 400;">Team members</span></h3>
+	<ul>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">Andersen Casta&ntilde;eda</span></li>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">Diana Carolina Quintero</span></li>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">Juan Felipe Rodriguez</span></li>
+	</ul>
+	<p>&nbsp;</p>
+	<h3><span style="font-weight: 400;">Presentation of the language</span></h3>
+	<p><span style="font-weight: 400;">In Unity we use c# wish is </span><span style="font-weight: 400;">a general-purpose,
+			multi-paradigm programming language encompassing strong typing, lexically scoped, imperative, declarative,
+			functional, generic, object-oriented, and component-oriented programming disciplines.</span></p>
+	<h3><span style="font-weight: 400;">Algorithm put in place</span></h3>
+	<img src="images/core-algorithm.png" alt="core algorithm">
+	<p><span style="font-weight: 400;">(screenshot)</span></p>
+	<p><span style="font-weight: 400;">Before run our core algorithm, we generate a random &lsquo;Master code&rsquo; of 4
+			slots, every slot can be some of the 6 available colors.</span></p>
+	<p><span style="font-weight: 400;">Then we wait for the user to submit his selections and we run the core
+			algorithm:</span></p>
+	<p><span style="font-weight: 400;">We have a loop to compare every &lsquo;Master code&rsquo; slot with the &lsquo;User
+			code&rsquo; slot in the same position, if they have the same color we set the corresponding feedback (one red
+			ping) and we update the array &lsquo;userIsEvaluated&rsquo; wich indicates wich slots sould&rsquo;t be take in
+			account in later iterations.</span></p>
+	<p><span style="font-weight: 400;">If they haven&rsquo;t the same color we start another loop to looking for some other
+			slot with the same color and we set the corresponding feedback (one white ping).</span></p>
+	<p>&nbsp;</p>
+	<h3><span style="font-weight: 400;">User(s) flow to play</span></h3>
+	<ul>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">Download the game</span></li>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">open the foder:</span></li>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">execute the Holberton-Hack-Day.exe</span></li>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">click on the slots of the first level:</span></li>
+	</ul>
+	<p><span style="font-weight: 400;">(screenshot)</span></p>
+	<ul>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">Submit your selections, and if you fail you can select
+				the slots of the next level.</span></li>
+	</ul>
+	<p><span style="font-weight: 400;">(screenshot)</span></p>
+	<p>&nbsp;</p>
+	<ul>
+		<li style="font-weight: 400;"><span style="font-weight: 400;">If you win or lose all levels you will see the
+				&lsquo;Master code&rsquo;</span></li>
+	</ul>
+	<p><span style="font-weight: 400;">(screenshot)</span></p>
+	<p>&nbsp;</p>
+	<div id="gtx-anchor"
+		style="position: absolute; visibility: hidden; left: 8px; top: 11px; width: 1043px; height: 157px;">&nbsp;</div>
+	<div class="jfk-bubble gtx-bubble" style="visibility: visible; left: 9px; top: 178px; opacity: 1;">&nbsp;</div>
+
+</body>
+</html>
